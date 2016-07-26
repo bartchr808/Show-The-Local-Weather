@@ -1,0 +1,250 @@
+/*@font-face {
+    font-family: 'weather_iconsregular';
+    src: url('weather-icons-master/font/weathericons-regular-webfont.eot');
+    src: url('weather-icons-master/font/weathericons-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+
+
+/*  url('weather-icons-master/font/weathericons-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+
+
+/*    url('weather-icons-master/font/weathericons-regular-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+
+
+/*  url(weather-icons-master/font/weathericons-regular-webfont.ttf') format('svg');
+    /* Legacy iOS */
+
+h1 {
+    text-align: center;
+    padding: 4% 0% 0% 0%;
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+h3 {
+    text-align: center;
+    olor: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#backgroundBody {
+    background-image: url('http://duncan.co/wp-content/uploads/2015/06/Duncan-Rawlinson-Photo-246534-Thunderstorm-Jennifer-Kateryna-Kovalskyj-Park-Toronto-Ontario-Canada-20150623-IMG_2300-CN-Tower-Ligtning-02.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+#temp {
+    text-align: center;
+    padding: 0% 0% 60% 0%;
+    margin: 50% 0% 0% 0%;
+}
+
+#tempWindBox {
+    position: relative;
+    top: 55px;
+}
+
+#description {
+    text-align: center;
+    padding: 50% 0% 50% 0%;
+}
+
+#wind {
+    text-align: center;
+    padding: 0% 0% 60% 0%;
+    margin: 50% 0% -60% 0%;
+}
+
+#dial {
+    height: 50px !important;
+    width: 50px !important;
+    display: block;
+    margin: auto;
+    font-size: 50px;
+    text-align: center;
+}
+
+#icon {
+    display: block;
+    margin: auto;
+    font-size: 100px;
+    margin-top: -50px;
+    text-align: center;
+}
+
+.bolder {
+    font-weight: bold;
+}
+
+#helper {
+    display: inline-block;
+    height: 50%;
+    vertical-align: middle;
+    margin-bottom: -25%;
+}
+
+#loadingText {
+    /*
+    position: fixed;
+    z-index: 1009;
+    margin: auto;
+    top: 48.5%;
+    text-align: center;
+    color: white;
+    background-color: aqua;
+*/
+    position: fixed;
+    z-index: 1002;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: white;
+    /*READ ABOUT WHAT THIS DOES*/
+    left: 50%;
+    transform: translate(-50%, 0);
+    /*READ ABOUT WHAT THIS DOES*/
+}
+
+#spinnerOne {
+    position: fixed;
+    z-index: 1001;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -120px;
+    margin-top: -120px;
+    border: 25px solid #181818;
+    border-top: 25px solid #2dcc70;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    animation: spinner 1.5s linear infinite;
+}
+
+#spinnerTwo {
+    position: fixed;
+    z-index: 1001;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: -75px;
+    border: 15px solid #181818;
+    border-top: 15px solid #cc2d3a;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spinner .9s linear infinite;
+}
+
+#spinnerThree {
+    position: fixed;
+    z-index: 1001;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    border: 9px solid #181818;
+    border-top: 9px solid #c02dcc;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spinner 0.5s linear infinite;
+}
+
+#loader-wrapper {
+    display: block;
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #181818;
+    z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOADER/ROTATOR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*
+.rotateSlow {
+    animation: spinner linear 2s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation: spinner linear 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% 50%;
+    -moz-animation: spinner linear 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: spinner linear 2s;
+    -o-animation-iteration-count: infinite;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: spinner linear 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-transform-origin: 50% 50%;
+}
+*/
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spinner {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes spinner {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+    }
+}

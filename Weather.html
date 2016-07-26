@@ -1,0 +1,93 @@
+<head>
+
+    <!--Main jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!--Bootstrap JS and CSS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!--Import Personal CSS-->
+    <link rel="stylesheet" type="text/css" href="Weather.css" media="screen" />
+
+    <!--Import Personal Javascript-->
+    <script type="text/javascript" src="Weather.js"></script>
+
+    <!--Import Weather Icons-->
+    <link rel="stylesheet" type="text/css" href="weather-icons-master/css/weather-icons.css">
+    <link rel="stylesheet" type="text/css" href="weather-icons-master/css/weather-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="weather-icons-master/css/weather-icons-wind.css">
+    <link rel="stylesheet" type="text/css" href="weather-icons-master/css/weather-icons-wind.min.css">
+    <!--<script src="weather-icons-master/font/weathericons-regular-webfont.eot"></script>
+    <object type="image/svg+xml" data="weather-icons-master/font/weathericons-regular-webfont.svg">
+    </object>
+    <script src="weather-icons-master/font/weathericons-regular-webfont.ttf"></script>
+    <script src="weather-icons-master/font/weathericons-regular-webfont.woff"></script>
+    <script src="weather-icons-master/font/weathericons-regular-webfont.woff2"></script>-->
+
+</head>
+
+
+
+<body id="backgroundBody">
+    <div class="container-fluid">
+        <p id="loadingText">Loading</p>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div id="spinnerOne"></div>
+            <div id="spinnerTwo"></div>
+            <div id="spinnerThree"></div>
+            <div id="coverLeft" class="loader-section section-left"></div>
+            <div id="coverRight" class="loader-section section-right"></div>
+
+        </div>
+
+        <h1>How's The Weather?</h1>
+        <h3>Created by Bartlomiej Chrzaszcz for Free Code Camp</h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-8 col-xs-8" style="background-color:orange">
+                <p id="location" style="text-align:center">location</p>
+            </div>
+            <div class="col-md-2 col-xs-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-xs-4"></div>
+            <div id="tempWindBox" class="col-md-1 col-xs-1" style="background-color:red">
+                <p id="temp">temp</p>
+            </div>
+            <div class="col-md-2 col-xs-2" style="background-color:yellow">
+                <p id="description">description</p><i id="icon"></i>
+            </div>
+            <div id="tempWindBox" class="col-md-1 col-xs-1" style="background-color:lightgreen">
+                <p id="wind">wind</p><i id="dial"></i>
+            </div>
+            <div class="col-md-4 col-xs-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 col-xs-5"></div>
+            <div class="col-md-2 col-xs-2" style="background-color:pink">
+                <p style="text-align:center">
+                    <a id="metric" class="bolder">Metric</a>
+                    <span id="unitSeparator"> | </span>
+                    <a id="imperial">Imperial</a>
+                </p>
+            </div>
+            <div class="col-md-5 col-xs-5"></div>
+        </div>
+
+
+    </div>
+    </div>
+</body>
